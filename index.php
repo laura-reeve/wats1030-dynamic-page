@@ -16,11 +16,17 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
+		background: black;
             }
+	    h1, p {
+		color: pink;
+		font-family: "Pacifico", cursive;
+	    }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -43,7 +49,7 @@
 
           foreach ($search['photo'] as $photo) {
               echo "<li>";
-              echo "<a class='image-link' href='http://www.flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'] . "/'>" . "<img class='img-circle' src='http://farm" . $photo['farm'] . ".static.flickr.com/" . $photo['server'] . "/" . $photo['id'] . "_" . $photo['secret'] . "_s.jpg' alt='". $photo['title'] . "'/>" . "</a> <br>" . "<a class='owner-link' href='http://www.flickr.com/people/" . $photo['owner'] . "/'>credits</a>";
+              echo "<a class='image-style' href='http://www.flickr.com/photos/" . $photo['owner'] . "/" . $photo['id'] . "/'>" . "<img class='img-circle' src='http://farm" . $photo['farm'] . ".static.flickr.com/" . $photo['server'] . "/" . $photo['id'] . "_" . $photo['secret'] . "_s.jpg' alt='". $photo['title'] . "'/>" . "</a> <br>" . "<a class='owner-link' style='color:pink;' href='http://www.flickr.com/people/" . $photo['owner'] . "/'>credits</a>";
               echo "</li>";
           }
         ?>
